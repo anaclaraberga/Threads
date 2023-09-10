@@ -4,26 +4,25 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
-public class TelaCalculador {
+public class CalculatorPainel {
 	
 	public static void main(String[] args) {
 		
 		JFrame janela = new JFrame("Multiplicação Demorada");
 
-		JTextField primeiro = new JTextField(10);
-		JTextField segundo = new JTextField(10);
-		JButton botao = new JButton(" = ");
-		JLabel resultado = new JLabel("           ?          ");
+		JTextField firstResult = new JTextField(10);
+		JTextField secondResult = new JTextField(10);
+		JButton button = new JButton(" = ");
+		JLabel result = new JLabel("           ?          ");
 		
-		//quando clica no botão será executado a classe Multiplicador
-		botao.addActionListener(new AcaoBotao(primeiro, segundo, resultado));
+		button.addActionListener(new ButtonAction(firstResult, secondResult, result));
 		
 		JPanel painel = new JPanel();
-		painel.add(primeiro);
+		painel.add(firstResult);
 		painel.add(new JLabel("x"));
-		painel.add(segundo);
-		painel.add(botao);
-		painel.add(resultado);
+		painel.add(secondResult);
+		painel.add(button);
+		painel.add(result);
 		
 		janela.add(painel);
 		janela.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
