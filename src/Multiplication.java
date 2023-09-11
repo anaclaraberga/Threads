@@ -1,19 +1,18 @@
 import java.math.BigInteger;
-import java.util.concurrent.TimeUnit;
 
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 
-public class TaskMultiplication implements Runnable{
+public class Multiplication implements Runnable{
 
   	private JTextField firstResult;
 	  private JTextField secondResult;
-	  private JLabel result;
+	  private JLabel resultMultiplication;
 
-    public TaskMultiplication(JTextField firstResult, JTextField secondResult, JLabel result) {
+    public Multiplication(JTextField firstResult, JTextField secondResult, JLabel resultMultiplication) {
       this.firstResult = firstResult;
       this.secondResult = secondResult;
-      this.result = result;
+      this.resultMultiplication = resultMultiplication;
     }
 
   @Override
@@ -30,7 +29,7 @@ public class TaskMultiplication implements Runnable{
 			}
 		}
 
-		result.setText(calculate.toString());
+		resultMultiplication.setText(calculate.toString());
 
     long fim = System.currentTimeMillis();
     long total = ((fim - inicio) / 1000) % 60;
