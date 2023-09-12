@@ -1,3 +1,5 @@
+import java.util.concurrent.TimeUnit;
+
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 
@@ -31,8 +33,8 @@ public class Division implements Runnable{
     resultDivision.setText(Long.toString(calculate));
 
     long fim = System.currentTimeMillis();
-    long total = ((fim - inicio) / 1000) % 60;
 
-		System.out.println(total);
+    long total = ((fim - inicio) / 1000) % 60;
+    System.out.println("Divisão: " + total);
   }
 }

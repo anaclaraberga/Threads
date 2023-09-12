@@ -32,9 +32,9 @@ public class Multiplication implements Runnable{
 		resultMultiplication.setText(calculate.toString());
 
     long fim = System.currentTimeMillis();
-    long total = ((fim - inicio) / 1000) % 60;
 
-		System.out.println(total);
+    long total = ((fim - inicio) / 1000) % 60;
+    System.out.println("Multiplicão: " + total);
   }
   
 }

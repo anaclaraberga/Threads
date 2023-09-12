@@ -4,7 +4,6 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
-import javax.swing.text.MaskFormatter;
 
 import java.awt.Container;
  
@@ -32,7 +31,9 @@ public class Painel extends JFrame {
 		
 		JPanel painel = new JPanel();
 
+		painel.add(new JLabel("Primeiro valor:"));
 		painel.add(firstResult);
+		painel.add(new JLabel("Segundo valor:"));
 		painel.add(new JLabel(" "));
 		painel.add(secondResult);
 		painel.add(button);
